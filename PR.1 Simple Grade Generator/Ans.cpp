@@ -12,7 +12,6 @@ int main()
     if (score < 0 || score > 100)
     {
         cout << "Invalid score! Please enter a value between 0 and 100." << endl;
-        return 1;
     }
 
     grade = (score >= 90) ? 'A' : (score >= 80) ? 'B'
