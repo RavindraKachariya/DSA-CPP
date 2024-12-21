@@ -1,6 +1,14 @@
 #include <iostream>
 using namespace std;
 
+/*
+41 
+41 42 
+41 42 43 
+41 42 43 44 
+41 42 43 44 45 
+*/
+
 int main()
 {
     int i, j;
