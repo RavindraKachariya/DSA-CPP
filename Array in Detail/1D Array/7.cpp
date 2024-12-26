@@ -7,7 +7,8 @@ int main()
 
     for (i = 0; i < 5 - 1; i++)
     {
-        cout << arr[i] - arr[i + 1] << endl;
+        cout << abs(arr[i] - arr[i + 1]) << endl;
     }
+
     return 0;
 }
