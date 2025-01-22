@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main()
@@ -8,21 +9,20 @@ int main()
     cout << "Enter N : ";
     cin >> n;
 
-    int arr[n], i;
+    vector<int> a(n);
 
-    for (i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
-        cout << "Arr" << " " << i << " ";
-        cin >> arr[i];
+        cout << "a[" << i << "] : ";
+        cin >> a[i];
     }
 
-    cout << "Negative Number From An Array : ";
-
-    for (i = 0; i < n; i++)
+    cout << "Negative Numbers from the Array : ";
+    for (int i = 0; i < n; i++)
     {
-        if (arr[i] < 0)
+        if (a[i] < 0)
         {
-            cout << arr[i];
+            cout << a[i] << ", ";
         }
     }
 
