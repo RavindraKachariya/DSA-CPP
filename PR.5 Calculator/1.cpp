@@ -17,7 +17,7 @@ int mult(int a, int b)
 }
 
 int divide(int a, int b)
-{ // Renamed from 'div' to 'divide'
+{
     if (b != 0)
     {
         return a / b;
@@ -25,12 +25,12 @@ int divide(int a, int b)
     else
     {
         cout << "Error: Division by zero!" << endl;
-        return 0; // Return 0 to handle the error gracefully
+        return 0;
     }
 }
 
 int mod(int a, int b)
-{ // Renamed from 'modulus' to 'mod'
+{
     if (b != 0)
     {
         return a % b;
@@ -38,7 +38,7 @@ int mod(int a, int b)
     else
     {
         cout << "Error: Division by zero!" << endl;
-        return 0; // Return 0 to handle the error gracefully
+        return 0;
     }
 }
 
@@ -74,7 +74,7 @@ void calc(int a, int b)
             break;
 
         case 4:
-            ans = divide(a, b); // Updated
+            ans = divide(a, b);
             if (b != 0)
             {
                 cout << "Result: " << ans << endl;
@@ -82,7 +82,7 @@ void calc(int a, int b)
             break;
 
         case 5:
-            ans = mod(a, b); // Updated
+            ans = mod(a, b);
             if (b != 0)
             {
                 cout << "Result: " << ans << endl;
