@@ -62,7 +62,7 @@ int main()
     }
 
     // Binary Search (Array must be sorted for binary search)
-    sort(arr.begin(), arr.end()); // Sorting the array for binary search
+    sort(arr.begin(), arr.end());
     int binaryResult = binarySearch(arr, target);
     if (binaryResult != -1)
     {
