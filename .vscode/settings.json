@@ -5,7 +5,8 @@
         "random": "cpp",
         "limits": "cpp",
         "vector": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "26-remove-duplicate": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
