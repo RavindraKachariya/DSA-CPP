@@ -15,6 +15,13 @@ public:
         name = n;
         rollNumber = r;
         marks = m;
+        cout << "Constructor called for " << name << endl;
+    }
+
+    // Destructor to clean up resources
+    ~Student()
+    {
+        cout << "Destructor called for " << name << endl;
     }
 
     // Function to display student details
@@ -28,11 +35,18 @@ public:
 
 int main()
 {
-    // Creating an object of Student class
+    // Creating an object of Student class (stack allocation)
     Student student1("Ravindra", 101, 92.5);
-
-    // Displaying details
     student1.displayDetails();
+
+    cout << endl;
+
+    // Creating a heap-allocated object
+    Student *student2 = new Student("Amit", 102, 88.3);
+    student2->displayDetails();
+
+    // Deleting the dynamically allocated object
+    delete student2;
 
     return 0;
 }
