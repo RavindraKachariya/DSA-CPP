@@ -16,7 +16,14 @@ public:
     int correctOption;
 
     Question(string q, string o1, string o2, string o3, string o4, int correct)
-        : questionText(q), option1(o1), option2(o2), option3(o3), option4(o4), correctOption(correct) {}
+    {
+        questionText = q;
+        option1 = o1;
+        option2 = o2;
+        option3 = o3;
+        option4 = o4;
+        correctOption = correct;
+    }
 
     // Display the question with options
     void display()
