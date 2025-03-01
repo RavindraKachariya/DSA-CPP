@@ -13,23 +13,6 @@ This is a simple C++ console-based exam system where users can take a quiz with 
 - C++
 - Standard Template Library (STL)
 
-## How to Compile and Run
-1. Clone this repository:
-   ```sh
-   git clone https://github.com/yourusername/cpp-exam-system.git
-   ```
-2. Navigate to the project directory:
-   ```sh
-   cd cpp-exam-system
-   ```
-3. Compile the code using g++:
-   ```sh
-   g++ exam_system.cpp -o exam_system
-   ```
-4. Run the compiled executable:
-   ```sh
-   ./exam_system
-   ```
 
 ## Example Output
 ```
