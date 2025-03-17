@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include <iostream>
 using namespace std;
 
@@ -105,6 +106,8 @@ int main()
 =======
 // Stack Implementation
 
+=======
+>>>>>>> 78d13fc (Add | Stack Exam)
 #include <iostream>
 using namespace std;
 
