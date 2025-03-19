@@ -23,7 +23,7 @@ public:
         this->head = nullptr;
     }
 
-    void insert(int data)
+    void insertAtTail(int data)
     {
         Node *newNode = new Node(data);
 
@@ -42,6 +42,30 @@ public:
         temp->next = newNode;
     }
 
+    void insertAtHead(int value)
+    {
+        Node *newNode = new Node(value);
+
+        if (head == nullptr)
+        {
+            head = newNode;
+            return;
+        }
+
+        newNode->next = head;
+        head = newNode;
+    }
+
+    void RemoveAtTail()
+    {
+        Node *temp = head;
+        while (temp->next->next)
+        {
+            temp = temp->next;
+        }
+        temp->next = nullptr;
+    }
+
     void print()
     {
         Node *temp = head;
@@ -58,10 +82,13 @@ int main()
 {
     LinkedList *list = new LinkedList();
 
-    list->insert(10);
-    list->insert(20);
-    list->insert(30);
-    list->insert(40);
+    list->insertAtTail(10);
+    list->insertAtTail(20);
+
+    list->insertAtHead(1);
+    list->insertAtHead(2);
+
+    list->RemoveAtTail();
 
     list->print();
 
