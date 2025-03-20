@@ -55,7 +55,36 @@ public:
         newNode->next = head;
         head = newNode;
     }
-    
+
+    void insertAtAnyPosition(int value, int position)
+    {
+        if (position <= 1)
+        {
+            this->insertAtHead(value);
+            return;
+        }
+
+        int size = this->length();
+
+        if (position > size)
+        {
+            this->insertAtTail(value);
+            return;
+        }
+
+        Node *newNode = new Node(value);
+        int i = 1;
+        Node *temp = head;
+
+        while (i < position - 1 && temp->next)
+        {
+            temp = temp->next;
+            i++;
+        }
+
+        newNode->next = temp->next;
+        temp->next = newNode;
+    }
 
     void RemoveAtTail()
     {
@@ -65,6 +94,19 @@ public:
             temp = temp->next;
         }
         temp->next = nullptr;
+    }
+
+    int length()
+    {
+        int count = 0;
+        Node *temp = head;
+
+        while (temp)
+        {
+            count++;
+            temp = temp->next;
+        }
+        return count;
     }
 
     void print()
@@ -83,15 +125,31 @@ int main()
 {
     LinkedList *list = new LinkedList();
 
+    // Insert at tail
+    cout << "Inserting at tail : 10, 20" << endl;
     list->insertAtTail(10);
     list->insertAtTail(20);
-
-    list->insertAtHead(1);
-    list->insertAtHead(2);
-
-    list->RemoveAtTail();
-
     list->print();
 
+    // Insert at head
+    cout << "Inserting at head : 1, 2" << endl;
+    list->insertAtHead(1);
+    list->insertAtHead(2);
+    list->print();
+
+    // Insert at any position
+    cout << "Inserting 30 at position 2" << endl;
+    list->insertAtAnyPosition(30, 2);
+    list->print();
+
+    // Remove at tail
+    cout << "Removing at tail" << endl;
+    list->RemoveAtTail();
+    list->print();
+
+    // Print length
+    cout << "Current Length : " << list->length() << endl;
+
     return 0;
+
 }
