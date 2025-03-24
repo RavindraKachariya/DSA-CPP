@@ -86,6 +86,31 @@ public:
         temp->next = newNode;
     }
 
+    void removeAtAnyPosition(int position)
+    {
+        if (head == nullptr || position <= 0)
+            return;
+        if (position == 1)
+        {
+            Node *temp = head;
+            head = head->next;
+            delete temp;
+            return;
+        }
+        Node *temp = head;
+        int i = 1;
+        while (i < position - 1 && temp->next)
+        {
+            temp = temp->next;
+            i++;
+        }
+        if (temp->next == nullptr)
+            return;
+        Node *toDelete = temp->next;
+        temp->next = temp->next->next;
+        delete toDelete;
+    }
+
     void RemoveAtTail()
     {
         Node *temp = head;
@@ -142,6 +167,10 @@ int main()
     list->insertAtAnyPosition(30, 2);
     list->print();
 
+    cout << "Removing at position 2" << endl;
+    list->removeAtAnyPosition(2);
+    list->print();
+
     // Remove at tail
     cout << "Removing at tail" << endl;
     list->RemoveAtTail();
@@ -151,5 +180,4 @@ int main()
     cout << "Current Length : " << list->length() << endl;
 
     return 0;
-
 }
